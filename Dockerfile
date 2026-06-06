@@ -8,13 +8,13 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install && chmod +x node_modules/.bin/jest
+RUN npm install
 
 # Copy all files
 COPY . .
 
 # Run tests
-RUN npm test
+RUN ./node_modules/.bin/jest
 
 # Expose the app port
 EXPOSE 3000
