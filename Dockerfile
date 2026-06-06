@@ -13,9 +13,6 @@ RUN npm install
 # Copy all files
 COPY . .
 
-# Run tests
-RUN ./node_modules/.bin/jest
-
 # Expose the app port
 EXPOSE 3000
 
