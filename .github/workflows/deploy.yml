@@ -19,11 +19,11 @@ jobs:
         with:
           node-version: '20'
 
-      # 3. Install and Test
+    # 3. Install and Test
       - name: Install dependencies and run tests
         run: |
-          npm install
-          npx jest
+          npm ci
+          ./node_modules/.bin/jest --forceExit
 
       # 4. Login to DockerHub
       - name: Login to DockerHub
